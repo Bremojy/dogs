@@ -1,0 +1,32 @@
+import { Link } from "react-router-dom";
+const Navbar = () => {
+    return ( 
+        <section className="row">
+        <div className="col-md-12 pt-4 ">
+            <div className="navbar navbar-expand-md navbar-light bg-light">
+                <Link to="/" className="navbar-brand">Dog's World</Link>
+                <button className="navbar-toggler" data-bs-target="#ivy" data-bs-toggle="collapse">
+                    <span className="navbar-toggler-icon"></span>
+                 </button>
+                 <div className="collapse navbar-collapse" id="ivy">
+                    <div className="navbar-nav">
+                        <Link to="/" className="nav-link">Home</Link>
+                        <Link to="/chatbot" className="nav-link"><b>Chatbot</b></Link>
+                        <Link to="/cart" className="nav-link">CART</Link>
+                       
+                        <Link to="/addproducts" className="nav-link">Add Products</Link>
+                    </div>
+                    <div className="navbar-nav ms-auto">
+                        
+                        <Link to="/signin" className="nav-link">Sign In</Link>
+                        <Link to="/signup" className="nav-link">Sign Up</Link>
+                    </div>
+                    
+                 </div>
+            </div>
+        </div>
+     </section>
+     );
+}
+ 
+export default Navbar;
