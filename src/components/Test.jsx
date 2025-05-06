@@ -13,23 +13,24 @@ const pairs = [
 "Hi, how can I help you today?",
 "Hello there, how can I assist you?"
 ]],
-[/(.*)(course|program|training|classes)(.*)/i, [
-"We offer great programs in Android Development, Full Stack Development, Data Science and many more. Would you like details on any of these?"
+[/(.*)(buy| purchase|get|adopt)(.*)/i, [
+"Great! We have Golden Retrievers, German Shepherds, and Labradors available. Would you like to know about a breed?",
 ]],
-[/(.*)android(.*)/i, [
-"We offer an Android course where you'll learn how to build mobile apps using Kotlin or Flutter. Interested?"
+[/(.*)(train|training|obedience|behavior)(.*)/i, [
+"We offer obedience and behavioral training. Would you like to book a session or know our packages?",
 ]],
 [/(.*)(Duration|How long|Length|Weeks|Months)(.*)/i, [
-"Most of our courses run between 2 to 6 months. It can be longer if you go advanced."
+"It depends on the dog,s age. For dogs above 6, we train them in months. For dogs that are 6 years old and below, we train them in weeks."
 ]],
 [/(.*)(apply|register|join)(.*)/i, [
-"You can join by registering online by visiting https://modcom.co.ke/register or visiting our office"
+"You can join by registering online by visiting https://dogs-ecru-nu.vercel.app/ or visiting our office"
 ]],
 [/(.*)(location|located|address)(.*)/i, [
-"We are located at Haven Court, 2nd Floor, Westlands off Waiyaki Way"
+"We are located at Nairobi 'CBD',Kenya.... dog's world street."
 ]]
 ];
  
+
 
 const getResponse = (input) => {
 for (const [pattern, responses] of pairs) {
