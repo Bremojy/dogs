@@ -11,7 +11,7 @@ const Cart = () => {
   const [loading, setLoading] = useState("");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
-  const img_url = "https://jeffson5f8n.pythonanywhere.com/static/images/";
+  const img_url = "https://Brian10.pythonanywhere.com/static/images/";
 
   const submitPayment = async (e) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ const Cart = () => {
       data.append("phone", phone);
 
       // Simulate payment request
-      const response = await axios.post("https://Sanse.pythonanywhere.com/api/mpesa_payment", data);
+      const response = await axios.post("https://Brian10.pythonanywhere.com/api/mpesa_payment", data);
 
       setLoading("");
 
