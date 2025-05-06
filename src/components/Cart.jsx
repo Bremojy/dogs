@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useCart } from "./CartContext";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+
 import Footer from "./Footer";
 import axios from "axios";
 
@@ -74,9 +74,15 @@ const Cart = () => {
 
   return (
     <div>
-      <Navbar/>
+      
       <div className="container mt-5 pt-5">
         <h3 className="text-primary mb-4"> <b>YOUR CART</b> </h3>
+        <nav className="m-4">
+                <Link className="btn btn-dark mx-2" to="/">Home</Link>
+                <Link className="btn-dark mx-2" to="/addproducts">Add Products</Link>
+                <Link className="btn-dark mx-2" to="/signin">Sign In</Link>
+                <Link className="btn-dark mx-2" to="/signup">Sign UP</Link>
+            </nav>
 
         {cart.length === 0 ? (
           <div className="alert alert-warning text-center">Your cart is empty</div>
