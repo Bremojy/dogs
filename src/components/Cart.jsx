@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useCart } from "./CartContext";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import axios from "axios";
 
 const Cart = () => {
   const { cart, removeFromCart, calculateTotal } = useCart();
+  const [selectedMethod, setSelectedMethod] = useState(null);
+
   const [showModal, setShowModal] = useState(false);
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState("");
@@ -64,8 +66,14 @@ const Cart = () => {
 
   return (
     <div>
-      <Navbar />
+      
       <div className="container mt-5 pt-5">
+      <nav className="m-4">
+                <Link className="btn btn-dark mx-2" to="/">Home</Link>
+                <Link className="btn-dark mx-2" to="/addproducts">Add Products</Link>
+                <Link className="btn-dark mx-2" to="/signin">Sign In</Link>
+                <Link className="btn-dark mx-2" to="/signup">Sign UP</Link>
+            </nav>
         <h3 className="text-primary mb-4"><b>YOUR CART</b></h3>
 
         {cart.length === 0 ? (
@@ -101,7 +109,7 @@ const Cart = () => {
           </div>
         )}
 
-        <div className="d-flex justify-content-between mt-4" style={{ fontWeight: "bold", color: "#00bfff" }}>
+        <div className="d-flex justify-content-between mt-4" style={{ fontWeight: "bold", color: "#00gsdyf" }}>
           <span>Total</span>
           <span>Ksh {calculateTotal()}</span>
         </div>
